@@ -62,7 +62,7 @@ const BookRideModal: React.FC<BookRideModalProps> = ({ open, onClose }) => {
         const data = await res.json();
         setError(data.error || "Failed to send enquiry. Please try again.");
       }
-    } catch (err) {
+    } catch {
       setError("Failed to send enquiry. Please try again.");
     } finally {
       setLoading(false);
@@ -162,7 +162,7 @@ const BookRideModal: React.FC<BookRideModalProps> = ({ open, onClose }) => {
               required
             />
             <label htmlFor="terms" className="text-sm text-black">
-              By clicking "Send Enquiry" button, you agree to our{" "}
+              By clicking &quot;Send Enquiry&quot; button, you agree to our{" "}
               <a href="#" className="text-yellow-400 font-semibold underline">
                 Terms & Conditions
               </a>{" "}

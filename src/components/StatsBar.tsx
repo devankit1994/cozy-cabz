@@ -4,6 +4,7 @@ import React from "react";
 const icons = [
   // Cities Covered
   <svg
+    key={0}
     width="36"
     height="36"
     fill="none"
@@ -31,6 +32,7 @@ const icons = [
   </svg>,
   // Cabs Available
   <svg
+    key={1}
     width="36"
     height="36"
     fill="none"
@@ -60,6 +62,7 @@ const icons = [
   </svg>,
   // Years of Experience
   <svg
+    key={2}
     width="36"
     height="36"
     fill="none"
@@ -76,6 +79,7 @@ const icons = [
   </svg>,
   // Happy Customers
   <svg
+    key={3}
     width="36"
     height="36"
     fill="none"
@@ -94,6 +98,7 @@ const icons = [
   </svg>,
   // Vendors
   <svg
+    key={4}
     width="36"
     height="36"
     fill="none"
@@ -125,15 +130,31 @@ const icons = [
 ];
 
 const stats = [
-  { value: "250+", label: "Cities Covered\nAcross India", icon: icons[0] },
-  { value: "1000+", label: "Cabs Available\nEveryday", icon: icons[1] },
+  {
+    value: "250+",
+    label: "Cities Covered\nAcross India",
+    icon: React.cloneElement(icons[0], { key: 0 }),
+  },
+  {
+    value: "1000+",
+    label: "Cabs Available\nEveryday",
+    icon: React.cloneElement(icons[1], { key: 1 }),
+  },
   {
     value: "10+",
     label: "Years of Experience\nin the Industry",
-    icon: icons[2],
+    icon: React.cloneElement(icons[2], { key: 2 }),
   },
-  { value: "50000+", label: "Happy Customers", icon: icons[3] },
-  { value: "1200+", label: "Vendors Nationwide", icon: icons[4] },
+  {
+    value: "50000+",
+    label: "Happy Customers",
+    icon: React.cloneElement(icons[3], { key: 3 }),
+  },
+  {
+    value: "1200+",
+    label: "Vendors Nationwide",
+    icon: React.cloneElement(icons[4], { key: 4 }),
+  },
 ];
 
 const StatsBar: React.FC = () => (
